@@ -41,7 +41,7 @@ public class DoctorsRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}*/
 
-		try
+		/*try
 		{
 			Doctors  doc1=new Doctors("Mahesh",99231.0, "Cordiologist", "Hyderabad",9898851234L);
 		 	 Doctors  doc2=new Doctors("Bharat",88231.0, "Cardio", "Nagpur",7878751234L);
@@ -55,6 +55,35 @@ public class DoctorsRunner implements CommandLineRunner {
 		{
 			e.printStackTrace();
 		}
+	*/
+		
+		/*try {
+			
+			   List<Doctors> list=service.FetchAllDoctorsData();
+			   list.forEach(doc->System.err.println(doc));
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}*/
+		
+		/*try
+		{
+			List<Integer> listOfId=List.of(105,102,103,905);
+			List<Doctors> listOfDoctor=service.FetchAllDoctorsDataByIDs(listOfId);
+			listOfDoctor.forEach(doc->System.err.println(doc));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}*/
+		
+		try
+		{
+		   String result=service.checkDoctoreIsAvailableById(102);
+		   System.err.println(result);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
-
 }

@@ -6,8 +6,13 @@ import com.lalit.entity.Doctors;
 
 public interface IDoctorsService 
 {
-      public String registerDoctors(Doctors doctor) throws Exception;
-      public String countAllDoctores() throws Exception;
-      public String addGroupOfDoctors(List<Doctors> list) throws Exception;
+      public String registerDoctors(Doctors doctor);
+      public String countAllDoctores() ;
+      public String addGroupOfDoctors(List<Doctors> list) ;
+      
+      public List<Doctors> FetchAllDoctorsData();
+      public List<Doctors> FetchAllDoctorsDataByIDs(List<Integer> list);
+     // public Doctors fetchDoctorDataById(Integer id);
+      public String checkDoctoreIsAvailableById(Integer id);
       
 }
